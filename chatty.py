@@ -1,5 +1,3 @@
-pip3 install --upgrade revChatGPT
-
 from revChatGPT.ChatGPT import Chatbot
 
 chatbot = Chatbot({
