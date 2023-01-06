@@ -1,0 +1,16 @@
+pip3 install --upgrade revChatGPT
+
+from revChatGPT.ChatGPT import Chatbot
+
+chatbot = Chatbot({
+  "session_token": "<YOUR_TOKEN>"
+}, conversation_id=None, parent_id=None) # You can start a custom conversation
+
+response = chatbot.ask("Prompt", conversation_id=None, parent_id=None) # You can specify custom conversation and parent ids. Otherwise it uses the saved conversation (yes. conversations are automatically saved)
+
+print(response)
+# {
+#   "message": message,
+#   "conversation_id": self.conversation_id,
+#   "parent_id": self.parent_id,
+# }
